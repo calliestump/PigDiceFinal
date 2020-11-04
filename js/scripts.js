@@ -13,7 +13,19 @@ Player.prototype.roll = function() {
     this.turnTotal = 0;
     return alert("You got a 1 :(");
   }
+  this.turnTotal += this.diceRoll;
 }
+Player.prototype.takeTurn = function() {
+  // player starts turn by rolling a die
+  this.roll();
+  // if roll is NOT 1, player decides to roll or hold.
+  
+  // Check for hold === "yes", then sum total rolls for this turn and sum with player.overallScore
+
+  // if roll === "yes", then add previous roll value to this turn's total value
+
+}
+
 // User Interface Logic ------ >
 $(document).ready(function() {
   $("form#diceGame").submit(function(event) {
@@ -26,6 +38,18 @@ $(document).ready(function() {
 
     $(".player1NameOutput").text(player1.name);
     $(".player2NameOutput").text(player2.name);
+  });
+  $(".roll1").click(function(event) {
+    event.preventDefault();
+    player1.roll();
+    $(".diceRoll1").text(player1.diceRoll);
+    $(".turnScore1").text(player1.turnTotal);
+  });
+  $(".roll2").click(function(event) {
+    event.preventDefault();
+    player2.roll();
+    $(".diceRoll2").text(player2.diceRoll);
+    $(".turnScore2").text(player2.turnTotal);
   });
 });
 
