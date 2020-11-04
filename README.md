@@ -69,6 +69,18 @@ _html_
 _css_
 _and a few drops of Bootstrap for styling_
 
+## Specs
+
+Describe: player()
+
+Test: "It will hold this turn's score."
+Expect: player(thisRoll).toEqual()
+
+Test: "It will hold this player's full game score."
+Expect: player1.overallScore.toEqual()
+
+
+
 ### License
 
 *MIT 2.0*

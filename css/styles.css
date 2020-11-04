@@ -1,0 +1,57 @@
+.not-active {
+  opacity: 0.2;
+}
+.container {
+  margin-top: 3.5%;
+}
+h4{
+  font-weight: 500;
+  font-family: fantasy;
+  margin-top: 10%;
+  color: darkred;
+  text-decoration: underline;
+}
+h3 {
+  text-align: center;
+  font-weight: 500;
+  font-family: Verdana, Tahoma, sans-serif;
+  color: red;
+}
+
+h2 {
+  margin-top: 3%;
+  text-align: center;
+  color: gray;
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+p {
+  font-weight: 500;
+}
+span {
+  color: crimson;
+}
+.player1Box {
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-bottom: 5%;
+}
+.player2Box {
+  text-align: center;
+}
+
+#nameSubmitButton {
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-bottom: 5%;
+}
+.gameArea {
+  border-style: inset;
+  border-color: chocolate;
+  margin-bottom: 5%;
+}
+
