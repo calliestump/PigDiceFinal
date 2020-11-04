@@ -1,5 +1,7 @@
+
+
 $(document).ready(function() {
-  $("form#").submit(function(event) {
+  $("form#diceGame").submit(function(event) {
     event.preventDefault();
   });
 });
