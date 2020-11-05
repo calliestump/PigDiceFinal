@@ -22,6 +22,10 @@ Player.prototype.roll = function() {
     }
     return alert("You got a 1 :( Next players turn");
   }
+  if (this.diceRoll + this.turnTotal + this.overallScroe >= 10) {
+    alert("Game Over. You win!")
+    $(".reset").show();
+  }
   this.turnTotal += this.diceRoll;
 }
 
@@ -50,6 +54,7 @@ $(document).ready(function() {
     $(".player1NameOutput").text(player1.name);
     $(".player2NameOutput").text(player2.name);
   });
+  
   $(".roll1").click(function(event) {
     event.preventDefault();
     $("div.player1Box").removeClass("not-active");
