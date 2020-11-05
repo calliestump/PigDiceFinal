@@ -1,3 +1,6 @@
+.reset {
+  display: none;
+}
 .not-active {
   opacity: 0.2;
 }

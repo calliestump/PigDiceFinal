@@ -11,25 +11,27 @@ Player.prototype.roll = function() {
   this.diceRoll = randomNum;
   if (randomNum == 1) {
     this.turnTotal = 0;
+    if (this == player1) {
+      // gray out player1's playing area and make full opacity player2's playing area
+      $("div.player1Box").addClass("not-active");
+      $("div.player2Box").removeClass("not-active");
+    }
+    if (this == player2) {
+      $("div.player2Box").addClass("not-active");
+      $("div.player1Box").removeClass("not-active");
+    }
     return alert("You got a 1 :( Next players turn");
   }
   this.turnTotal += this.diceRoll;
 }
 
-Player.prototype.takeTurn = function() {
-  // player starts turn by rolling a die
-  this.roll();
-  // if roll is NOT 1, player decides to roll or hold.
-  
-  // Check for hold === "yes", then sum total rolls for this turn and sum with player.overallScore
-
-  // if roll === "yes", then add previous roll value to this turn's total value
-}
-
 Player.prototype.hold = function () {
   this.overallScore += this.turnTotal;
-  if (this.overallScore >= 100) {
+}
+Player.prototype.scoreCheck = function() {
+  if (this.overallScore >= 10) {
     alert("Game Over. You win!")
+    $(".reset").show();
   } else {
     return false;
   }
@@ -50,20 +52,27 @@ $(document).ready(function() {
   });
   $(".roll1").click(function(event) {
     event.preventDefault();
+    $("div.player1Box").removeClass("not-active");
+    $("div.player2Box").addClass("not-active");
     player1.roll();
     $(".diceRoll1").text(player1.diceRoll);
     $(".turnScore1").text(player1.turnTotal);
+    player1.scoreCheck();
   });
   $(".roll2").click(function(event) {
     event.preventDefault();
+    $("div.player2Box").removeClass("not-active");
+    $("div.player1Box").addClass("not-active");
     player2.roll();
     $(".diceRoll2").text(player2.diceRoll);
     $(".turnScore2").text(player2.turnTotal);
+    player2.scoreCheck();
   });
 
   $(".hold1").click(function(event) {
     event.preventDefault();
     player1.hold();
+    player1.scoreCheck();
     $(".overallScore1").text(player1.overallScore);
     player1.diceRoll = 0;
     player1.turnTotal = 0;
@@ -75,6 +84,7 @@ $(document).ready(function() {
   $(".hold2").click(function(event) {
     event.preventDefault();
     player2.hold();
+    player2.scoreCheck();
     $(".overallScore2").text(player2.overallScore);
     player2.diceRoll = 0;
     player2.turnTotal = 0;
