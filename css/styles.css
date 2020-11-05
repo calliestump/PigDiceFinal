@@ -17,6 +17,7 @@
   opacity: 0.2;
 }
 .container {
+  text-align: center;
   margin-top: 3.5%;
 }
 .player1WinTotal {
@@ -29,21 +30,18 @@
 }
 
 #nameSubmitButton {
-  margin-left: 45%;
-  margin-right: 45%;
   margin-bottom: 5%;
 }
 .gameArea {
+  text-align: center;
   border-style: inset;
   border-color: chocolate;
-  margin-bottom: 5%;
+  margin-bottom: auto;
 }
 
 .resetButton {
   display: none;
-  margin-left: 45%;
-  margin-right: 45%;
-  margin-bottom: 5%;
+  margin-top: 5%;
 }
 .result {
   display: none;
@@ -56,7 +54,6 @@ body {
 h4{
   font-weight: 500;
   font-family: fantasy;
-  margin-top: 10%;
   color: darkred;
   text-decoration: underline;
 }
@@ -68,7 +65,6 @@ h3 {
 }
 
 h2 {
-  margin-top: 3%;
   text-align: center;
   color: gray;
 }
@@ -83,3 +79,7 @@ p {
 span {
   color: crimson;
 }
+.roll1 {
+  float: left;
+}
+

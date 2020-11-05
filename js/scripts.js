@@ -6,6 +6,13 @@ function Player(name) {
   this.overallScore = 0;
   this.currentWins = 0;
 }
+// Reset Game: keep player names and .currentWins tallies, but set to 0 all other key-value pairs
+Player.prototype.gameReset = function() {
+  this.diceRoll = 0;
+  this.turnTotal = 0;
+  this.overallScore = 0;
+}
+
 //Creates Rolling variable and conditiional statement for "1"
 Player.prototype.roll = function() {
   var randomNum = Math.floor((Math.random() * 6) + 1);
@@ -25,9 +32,12 @@ Player.prototype.roll = function() {
   }
   if ((this.diceRoll + this.turnTotal + this.overallScore) >= 10) {
     alert("Game Over. You win!")
+    $(".resetButton").show();
+    $(".result").show();
     console.log("We're getting into conditional code block at bottom of .roll function call");
-    
     this.currentWins++;
+    player1.gameReset();
+    player2.gameReset();
   }
   this.turnTotal += this.diceRoll;
 }
@@ -39,7 +49,7 @@ Player.prototype.scoreCheck = function() {
   if (this.overallScore >= 10) {
     this.currentWins++;
     //$(".turnScore1").val();
-    alert("Game Over. You win!")
+    alert("Game Over. Your overall score is greater than or equal to 10. You win!")
     $(".resetButton").show();
     $(".result").show();
   } else if (($(".turnScore1").val() + $(".turnScore2").val()) >= 10) {
