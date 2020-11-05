@@ -34,6 +34,10 @@ Player.prototype.roll = function() {
     alert("Game Over. You win!")
     $(".resetButton").show();
     $(".result").show();
+    $(".wins").show();
+
+    $("div.player1Box").addClass("not-active");
+    $("div.player2Box").addClass("not-active");
     console.log("We're getting into conditional code block at bottom of .roll function call");
     this.currentWins++;
     player1.gameReset();
@@ -52,6 +56,7 @@ Player.prototype.scoreCheck = function() {
     alert("Game Over. Your overall score is greater than or equal to 10. You win!")
     $(".resetButton").show();
     $(".result").show();
+
   } else if (($(".turnScore1").val() + $(".turnScore2").val()) >= 10) {
     alert("Game Over. Our jQueries are telling us you've won!")
     $(".resetButton").show();

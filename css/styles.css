@@ -21,11 +21,11 @@
   margin-top: 3.5%;
 }
 .player1WinTotal {
-  font-family: fantasy;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
 }
 .player2WinTotal {
-  font-family: fantasy;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: bold;
 }
 
@@ -50,7 +50,10 @@
 body {
   background-color: pink;
 }
-
+h5 {
+  color: rgba(30, 30, 218, 0.493);
+  display: none;
+}
 h4{
   font-weight: 500;
   font-family: fantasy;
@@ -79,7 +82,3 @@ p {
 span {
   color: crimson;
 }
-.roll1 {
-  float: left;
-}
-
