@@ -34,6 +34,7 @@
           <div class="player1Box">
             <section class="col-md-6">
               <h4 class="player1NameOutput"></h4>
+              <h3>Wins: <span class="player1WinTotal"></span></h3>
               <p>Rolled: <span class="diceRoll1"></span></p>
               <p>Turn Score: <span class="turnScore1"></span></p>
               <p>Overall Score: <span class="overallScore1"></span></p>
@@ -41,9 +42,16 @@
               <button class="hold1 btn-danger">HOLD</button>
             </section>
           </div>
+          <div class="result">
+            <section class="col-md-6">
+              <h4>Winner</h4>
+              <h3><span class=""></span></h3>
+            </section>
+          </div>
           <div class="player2Box">
             <section class="col-md-6">
               <h4 class="player2NameOutput"></h4>
+              <h3>Wins: <span class="player2WinTotal"></span></h3>
               <p>Rolled: <span class="diceRoll2"></span></p>
               <p>Turn Score: <span class="turnScore2"></span></p>
               <p>Overall Score: <span class="overallScore2"></span></p>
@@ -53,8 +61,11 @@
           </div>
         </div>
       </div>
-      <input type="button" class="btn btn-secondary" id="reset" value="Reset" onClick="document.location.reload(true)">
     </form>
+    <div class="resetButton">
+      <input type="button" class="btn btn-secondary" id="reset" value="Reset" onClick="document.location.reload(true)">
+    </div>
   </div>
+  <br>
 </body>
 </html>

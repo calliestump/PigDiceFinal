@@ -1,5 +1,17 @@
+.player1Box {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
+.player2Box {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+}
 .reset {
-  display: none;
+  text-align: center;
 }
 .not-active {
   opacity: 0.2;
@@ -7,6 +19,40 @@
 .container {
   margin-top: 3.5%;
 }
+.player1WinTotal {
+  font-family: fantasy;
+  font-weight: bold;
+}
+.player2WinTotal {
+  font-family: fantasy;
+  font-weight: bold;
+}
+
+#nameSubmitButton {
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-bottom: 5%;
+}
+.gameArea {
+  border-style: inset;
+  border-color: chocolate;
+  margin-bottom: 5%;
+}
+
+.resetButton {
+  display: none;
+  margin-left: 45%;
+  margin-right: 45%;
+  margin-bottom: 5%;
+}
+.result {
+  display: none;
+}
+
+body {
+  background-color: pink;
+}
+
 h4{
   font-weight: 500;
   font-family: fantasy;
@@ -37,24 +83,3 @@ p {
 span {
   color: crimson;
 }
-.player1Box {
-  text-align: center;
-  margin-left: 25%;
-  margin-right: 25%;
-  margin-bottom: 5%;
-}
-.player2Box {
-  text-align: center;
-}
-
-#nameSubmitButton {
-  margin-left: 45%;
-  margin-right: 45%;
-  margin-bottom: 5%;
-}
-.gameArea {
-  border-style: inset;
-  border-color: chocolate;
-  margin-bottom: 5%;
-}
-
