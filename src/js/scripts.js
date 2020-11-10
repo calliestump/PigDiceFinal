@@ -30,7 +30,7 @@ Player.prototype.roll = function() {
     }
     return alert("You got a 1 :( Next players turn");
   }
-  if ((this.diceRoll + this.turnTotal + this.overallScore) >= 10) {
+  if ((this.diceRoll + this.turnTotal + this.overallScore) >= 100) {
     alert("Game Over. You win!")
     $(".resetButton").show();
     $(".result").show();
@@ -50,14 +50,13 @@ Player.prototype.hold = function () {
   this.overallScore += this.turnTotal;
 }
 Player.prototype.scoreCheck = function() {
-  if (this.overallScore >= 10) {
+  if (this.overallScore >= 100) {
     this.currentWins++;
-    //$(".turnScore1").val();
-    alert("Game Over. Your overall score is greater than or equal to 10. You win!")
+    alert("Game Over. Your overall score is greater than or equal to 100. You win!")
     $(".resetButton").show();
     $(".result").show();
 
-  } else if (($(".turnScore1").val() + $(".turnScore2").val()) >= 10) {
+  } else if (($(".turnScore1").val() + $(".turnScore2").val()) >= 100) {
     alert("Game Over. Our jQueries are telling us you've won!")
     $(".resetButton").show();
     $(".result").show();
@@ -77,7 +76,6 @@ $(document).ready(function() {
     player2 = new Player(gamer2);
     $(".player1NameOutput").text(player1.name);
     $(".player2NameOutput").text(player2.name);
-    // span class="player2WinTotal"
     $("span.player2WinTotal").text(player2.currentWins);
     $("span.player1WinTotal").text(player1.currentWins);
   });
