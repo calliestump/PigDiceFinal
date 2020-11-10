@@ -1,3 +1,4 @@
+import "./css/styles.css";
 // Business Logic ----- >
 function Player(name) {
   this.name = name;
