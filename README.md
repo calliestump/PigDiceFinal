@@ -1,6 +1,6 @@
 # _A Game: Pig Dice_
 
-### By _**Callie Stump, Constantine Yakubovski, and Tyler Sinks**_
+### By _**Callie Stump, Constantine Yakubovski, and Tyler Sinks, Garrett P. Brown**_
 
 ### _This Project's Reason for Being and Description_
 _This project functions as an attempt to make a playable version of the game called Pig Dice. The creators hope that it will also be a place to implement chaining methods and overall business logic using constructor functions and the prototype chain. Yay, JavaScript!_
