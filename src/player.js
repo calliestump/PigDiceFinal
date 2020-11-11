@@ -9,6 +9,8 @@ export default function Player(name) {
 Player.prototype.roll = function() {
   let randomNum = Math.floor((Math.random() * 6) + 1);
   this.diceRoll = randomNum;
+  let player1;
+  let player2;
   if (randomNum == 1) {
     this.turnTotal = 0;
     if (this == player1) {
