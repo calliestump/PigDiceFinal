@@ -85,7 +85,7 @@ Expect: player1.overallScore.toEqual()
 
 *MIT 2.0*
 
-Copyright (c) 2020 **_Tyler Sinks_**
+Copyright (c) 2020 **_Callie Stump, Constantine Yakubovski, and Tyler Sinks, Garrett P. Brown_**
 
 [^bignote]: If you're having trouble finding that nice green "Code" button:
     * a .png of it at time of README writing is this: ![the green Code button seen near the top right of any repository hosted on GitHub](img/greenCodeButton.png)
